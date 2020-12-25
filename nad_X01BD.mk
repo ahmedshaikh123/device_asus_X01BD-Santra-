@@ -19,14 +19,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common Xtended stuff
-$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
+# Inherit some common Nusantra stuff
+WITH_GAPPS := true
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
-
-# Official MSM-Xtended
-XTENDED_BUILD_TYPE := OFFICIAL
 
 # Google Connectivity Services
 TARGET_INCLUDE_WIFI_EXT := true
@@ -35,7 +33,7 @@ TARGET_INCLUDE_WIFI_EXT := true
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := xtended_X01BD
+PRODUCT_NAME := nad_X01BD
 PRODUCT_DEVICE := X01BD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_X01BDA
@@ -48,10 +46,9 @@ TARGET_VENDOR := asus
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=ASUS_X01BD_1 \
     PRODUCT_NAME=WW_X01BD \
-    PRIVATE_BUILD_DESC="walleye-user 8.1.0 OPM1.171019.011 4448085 release-keys"
+    PRIVATE_BUILD_DESC="redfin-user 11 RQ1A.201205.010 6953398 release-keys"
 
 # Build fingerprint
-BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
+BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ1A.201205.010/6953398:user/release-keys"
 
-# Maintainer
-XTENDED_MAINTAINER := 🔥SonalSingh18🔥
+

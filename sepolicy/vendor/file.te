@@ -3,6 +3,7 @@ type public_adsprpcd_file, file_type;
 type proc_tpd_gesture, fs_type, proc_type;
 type sysfs_call_status, sysfs_type, fs_type;
 type sysfs_wifi, sysfs_type, fs_type;
+type sysfs_sensors, sysfs_type, fs_type;
 
 # ZenParts
 type kcal_dev, sysfs_type, fs_type;
