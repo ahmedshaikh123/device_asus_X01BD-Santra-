@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Inherit some common Superior stuff
-$(call inherit-product, vendor/superior/config/common.mk)
+$(call inherit-product, vendor/legion/config/common.mk)
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -28,14 +28,18 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # Google Connectivity Services
 TARGET_INCLUDE_WIFI_EXT := true
 
-# Superior Official
-SUPERIOR_OFFICIAL=true
+#Play bold Play wild
+LEGION_BUILD_TYPE := OFFICIAL
+
+# LegionOS Device Maintainers
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.maintainer.name=Ahmed Shaikh
 
 # Inherit from X01BD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := superior_X01BD
+PRODUCT_NAME := legion_X01BD
 PRODUCT_DEVICE := X01BD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_X01BDA
@@ -48,10 +52,10 @@ TARGET_VENDOR := asus
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=ASUS_X01BD_1 \
     PRODUCT_NAME=WW_X01BD \
-    BUILD_DESCRIPTION="coral-user 11 RQ1A.201205.008 6943376 release-keys"
+    BUILD_DESCRIPTION="redfin-user 11 RQ1A.201205.010 6953398 release-keys"
 
 # Build fingerprint
-BUILD_FINGERPRINT := "google/coral/coral:11/RQ1A.201205.008/6943376:user/release-keys"
+BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ1A.201205.010/6953398:user/release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)

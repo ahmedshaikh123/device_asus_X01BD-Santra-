@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_X01BD.mk
+    $(LOCAL_DIR)/legion_X01BD.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_X01BD-eng \
-    superior_X01BD-user \
-    superior_X01BD-userdebug
+    legion_X01BD-eng \
+    legion_X01BD-user \
+    legion_X01BD-userdebug
